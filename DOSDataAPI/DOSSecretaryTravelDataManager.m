@@ -28,12 +28,10 @@
 -(void) getSecretaryTravelForPage:(NSInteger)pageNum success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock
 {
     // Format the query string
-    //NSString *query = [NSString stringWithFormat:@"%@?command=%@&per_page=%ld&page=%ld&fields=%@",kAPIBaseURL,kSecretaryTravelCommand,self.itemsPerPage,pageNum,self.resultFields];
-    
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:self.requestCommand,@"command",self.itemsPerPage,@"per_page",pageNum,@"page",self.resultFields,@"fields",nil];
+    NSString *query = [NSString stringWithFormat:@"%@?command=%@&per_page=%ld&page=%ld&fields=%@",kAPIBaseURL,self.requestCommand,(long)self.itemsPerPage,(long)pageNum,self.resultFields];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
-    [manager GET:kAPIBaseURL parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         successBlock(responseObject);
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Error: %@", error);
