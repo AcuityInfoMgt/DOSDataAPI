@@ -9,9 +9,9 @@
 #import "DOSSecretaryTravelDataManager.h"
 #import "AFNetworking.h"
 
-@implementation DOSSecretaryTravelDataManager
-
 #define kSecretaryTravelCommand @"get_secretary_travel"
+
+@implementation DOSSecretaryTravelDataManager
 
 -(id)init
 {
