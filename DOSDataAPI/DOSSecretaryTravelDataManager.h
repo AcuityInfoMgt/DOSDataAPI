@@ -14,6 +14,9 @@
 
 // **** Properties to control query parameters ****
 
+// Default = get_secretary_travel
+@property (nonatomic, strong) NSString *requestCommand;
+
 // Default = 100
 @property (nonatomic) NSInteger itemsPerPage;
 
