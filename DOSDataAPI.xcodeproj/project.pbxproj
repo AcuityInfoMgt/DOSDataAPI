@@ -32,7 +32,7 @@
 		B115EAD6186D0F6200002237 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
-			dstPath = "include/$(PRODUCT_NAME)";
+			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
 				B115EAE1186D0F6200002237 /* DOSDataAPI.h in CopyFiles */,

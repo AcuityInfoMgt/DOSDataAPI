@@ -10,4 +10,9 @@
 
 @implementation DOSDataAPI
 
+- (NSString *) helloWorld
+{
+    return @"Hello World";
+}
+
 @end

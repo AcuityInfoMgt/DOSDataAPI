@@ -10,4 +10,6 @@
 
 @interface DOSDataAPI : NSObject
 
+- (NSString *) helloWorld;
+
 @end
