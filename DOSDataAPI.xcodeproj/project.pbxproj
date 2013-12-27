@@ -47,6 +47,8 @@
 		B115EB8A186D1D6D00002237 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB89186D1D6D00002237 /* SystemConfiguration.framework */; };
 		B115EB91186DB4E300002237 /* DOSSecretaryTravelDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB90186DB4E300002237 /* DOSSecretaryTravelDataManager.m */; };
 		B115EB94186DB4FC00002237 /* DOSSecretaryTravelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB93186DB4FC00002237 /* DOSSecretaryTravelItem.m */; };
+		B115EB99186DC2AB00002237 /* DOSSecretaryTravelDataManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB8F186DB4E300002237 /* DOSSecretaryTravelDataManager.h */; };
+		B115EB9A186DC2AB00002237 /* DOSSecretaryTravelItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB92186DB4FC00002237 /* DOSSecretaryTravelItem.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +68,8 @@
 			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
+				B115EB99186DC2AB00002237 /* DOSSecretaryTravelDataManager.h in CopyFiles */,
+				B115EB9A186DC2AB00002237 /* DOSSecretaryTravelItem.h in CopyFiles */,
 				B115EB7B186D1BE700002237 /* AFHTTPRequestOperation.h in CopyFiles */,
 				B115EB7C186D1BE700002237 /* AFHTTPRequestOperationManager.h in CopyFiles */,
 				B115EB7D186D1BE700002237 /* AFHTTPSessionManager.h in CopyFiles */,
