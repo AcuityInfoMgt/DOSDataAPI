@@ -45,6 +45,8 @@
 		B115EB83186D1BE700002237 /* AFURLResponseSerialization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB62186D188B00002237 /* AFURLResponseSerialization.h */; };
 		B115EB84186D1BE700002237 /* AFURLSessionManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB64186D188B00002237 /* AFURLSessionManager.h */; };
 		B115EB8A186D1D6D00002237 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB89186D1D6D00002237 /* SystemConfiguration.framework */; };
+		B115EB91186DB4E300002237 /* DOSSecretaryTravelDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB90186DB4E300002237 /* DOSSecretaryTravelDataManager.m */; };
+		B115EB94186DB4FC00002237 /* DOSSecretaryTravelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB93186DB4FC00002237 /* DOSSecretaryTravelItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,10 @@
 		B115EB64186D188B00002237 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		B115EB65186D188B00002237 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
 		B115EB89186D1D6D00002237 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B115EB8F186DB4E300002237 /* DOSSecretaryTravelDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSSecretaryTravelDataManager.h; sourceTree = "<group>"; };
+		B115EB90186DB4E300002237 /* DOSSecretaryTravelDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSSecretaryTravelDataManager.m; sourceTree = "<group>"; };
+		B115EB92186DB4FC00002237 /* DOSSecretaryTravelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSSecretaryTravelItem.h; sourceTree = "<group>"; };
+		B115EB93186DB4FC00002237 /* DOSSecretaryTravelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSSecretaryTravelItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +180,10 @@
 			children = (
 				B115EAE0186D0F6200002237 /* DOSDataAPI.h */,
 				B115EAE2186D0F6200002237 /* DOSDataAPI.m */,
+				B115EB8F186DB4E300002237 /* DOSSecretaryTravelDataManager.h */,
+				B115EB90186DB4E300002237 /* DOSSecretaryTravelDataManager.m */,
+				B115EB92186DB4FC00002237 /* DOSSecretaryTravelItem.h */,
+				B115EB93186DB4FC00002237 /* DOSSecretaryTravelItem.m */,
 				B115EADE186D0F6200002237 /* Supporting Files */,
 			);
 			path = DOSDataAPI;
@@ -320,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B115EB94186DB4FC00002237 /* DOSSecretaryTravelItem.m in Sources */,
 				B115EB71186D1B5000002237 /* AFHTTPRequestOperation.m in Sources */,
 				B115EB72186D1B5000002237 /* AFHTTPRequestOperationManager.m in Sources */,
 				B115EB73186D1B5000002237 /* AFHTTPSessionManager.m in Sources */,
@@ -329,6 +340,7 @@
 				B115EB77186D1B5000002237 /* AFURLRequestSerialization.m in Sources */,
 				B115EB78186D1B5000002237 /* AFURLResponseSerialization.m in Sources */,
 				B115EB79186D1B5000002237 /* AFURLSessionManager.m in Sources */,
+				B115EB91186DB4E300002237 /* DOSSecretaryTravelDataManager.m in Sources */,
 				B115EAE3186D0F6200002237 /* DOSDataAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

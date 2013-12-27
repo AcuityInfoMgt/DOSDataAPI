@@ -8,12 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DOSDataAPI : NSObject
+// **** Set API end point URL
+#define kAPIBaseURL @"http://www.state.gov/api/v1"
 
-// Define success/failure block types
+// **** Define query success/failure block types ****
 typedef void (^ APISuccessBlock)(id);
+typedef void (^ APIFailureBlock)(NSError*);
 
-- (NSString *) helloWorld;
-- (void) testNetworking:(APISuccessBlock)successBlock;
+// **** Import State.gov Data SDK classes ****
+#import "DOSSecretaryTravelDataManager.h"
+
+@interface DOSDataAPI : NSObject
 
 @end
