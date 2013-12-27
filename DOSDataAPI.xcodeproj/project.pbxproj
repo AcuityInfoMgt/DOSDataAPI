@@ -25,6 +25,15 @@
 		B115EB6C186D188B00002237 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB61186D188B00002237 /* AFURLRequestSerialization.m */; };
 		B115EB6D186D188B00002237 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB63186D188B00002237 /* AFURLResponseSerialization.m */; };
 		B115EB6E186D188B00002237 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB65186D188B00002237 /* AFURLSessionManager.m */; };
+		B115EB71186D1B5000002237 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB54186D188B00002237 /* AFHTTPRequestOperation.m */; };
+		B115EB72186D1B5000002237 /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB56186D188B00002237 /* AFHTTPRequestOperationManager.m */; };
+		B115EB73186D1B5000002237 /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB58186D188B00002237 /* AFHTTPSessionManager.m */; };
+		B115EB74186D1B5000002237 /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB5B186D188B00002237 /* AFNetworkReachabilityManager.m */; };
+		B115EB75186D1B5000002237 /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB5D186D188B00002237 /* AFSecurityPolicy.m */; };
+		B115EB76186D1B5000002237 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB5F186D188B00002237 /* AFURLConnectionOperation.m */; };
+		B115EB77186D1B5000002237 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB61186D188B00002237 /* AFURLRequestSerialization.m */; };
+		B115EB78186D1B5000002237 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB63186D188B00002237 /* AFURLResponseSerialization.m */; };
+		B115EB79186D1B5000002237 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB65186D188B00002237 /* AFURLSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -287,6 +296,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B115EB71186D1B5000002237 /* AFHTTPRequestOperation.m in Sources */,
+				B115EB72186D1B5000002237 /* AFHTTPRequestOperationManager.m in Sources */,
+				B115EB73186D1B5000002237 /* AFHTTPSessionManager.m in Sources */,
+				B115EB74186D1B5000002237 /* AFNetworkReachabilityManager.m in Sources */,
+				B115EB75186D1B5000002237 /* AFSecurityPolicy.m in Sources */,
+				B115EB76186D1B5000002237 /* AFURLConnectionOperation.m in Sources */,
+				B115EB77186D1B5000002237 /* AFURLRequestSerialization.m in Sources */,
+				B115EB78186D1B5000002237 /* AFURLResponseSerialization.m in Sources */,
+				B115EB79186D1B5000002237 /* AFURLSessionManager.m in Sources */,
 				B115EAE3186D0F6200002237 /* DOSDataAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
