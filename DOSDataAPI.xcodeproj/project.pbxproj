@@ -34,6 +34,16 @@
 		B115EB77186D1B5000002237 /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB61186D188B00002237 /* AFURLRequestSerialization.m */; };
 		B115EB78186D1B5000002237 /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB63186D188B00002237 /* AFURLResponseSerialization.m */; };
 		B115EB79186D1B5000002237 /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EB65186D188B00002237 /* AFURLSessionManager.m */; };
+		B115EB7B186D1BE700002237 /* AFHTTPRequestOperation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB53186D188B00002237 /* AFHTTPRequestOperation.h */; };
+		B115EB7C186D1BE700002237 /* AFHTTPRequestOperationManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB55186D188B00002237 /* AFHTTPRequestOperationManager.h */; };
+		B115EB7D186D1BE700002237 /* AFHTTPSessionManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB57186D188B00002237 /* AFHTTPSessionManager.h */; };
+		B115EB7E186D1BE700002237 /* AFNetworking.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB59186D188B00002237 /* AFNetworking.h */; };
+		B115EB7F186D1BE700002237 /* AFNetworkReachabilityManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB5A186D188B00002237 /* AFNetworkReachabilityManager.h */; };
+		B115EB80186D1BE700002237 /* AFSecurityPolicy.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB5C186D188B00002237 /* AFSecurityPolicy.h */; };
+		B115EB81186D1BE700002237 /* AFURLConnectionOperation.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB5E186D188B00002237 /* AFURLConnectionOperation.h */; };
+		B115EB82186D1BE700002237 /* AFURLRequestSerialization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB60186D188B00002237 /* AFURLRequestSerialization.h */; };
+		B115EB83186D1BE700002237 /* AFURLResponseSerialization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB62186D188B00002237 /* AFURLResponseSerialization.h */; };
+		B115EB84186D1BE700002237 /* AFURLSessionManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB64186D188B00002237 /* AFURLSessionManager.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +63,16 @@
 			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
+				B115EB7B186D1BE700002237 /* AFHTTPRequestOperation.h in CopyFiles */,
+				B115EB7C186D1BE700002237 /* AFHTTPRequestOperationManager.h in CopyFiles */,
+				B115EB7D186D1BE700002237 /* AFHTTPSessionManager.h in CopyFiles */,
+				B115EB7E186D1BE700002237 /* AFNetworking.h in CopyFiles */,
+				B115EB7F186D1BE700002237 /* AFNetworkReachabilityManager.h in CopyFiles */,
+				B115EB80186D1BE700002237 /* AFSecurityPolicy.h in CopyFiles */,
+				B115EB81186D1BE700002237 /* AFURLConnectionOperation.h in CopyFiles */,
+				B115EB82186D1BE700002237 /* AFURLRequestSerialization.h in CopyFiles */,
+				B115EB83186D1BE700002237 /* AFURLResponseSerialization.h in CopyFiles */,
+				B115EB84186D1BE700002237 /* AFURLSessionManager.h in CopyFiles */,
 				B115EAE1186D0F6200002237 /* DOSDataAPI.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
