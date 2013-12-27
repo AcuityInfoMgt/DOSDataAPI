@@ -44,6 +44,7 @@
 		B115EB82186D1BE700002237 /* AFURLRequestSerialization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB60186D188B00002237 /* AFURLRequestSerialization.h */; };
 		B115EB83186D1BE700002237 /* AFURLResponseSerialization.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB62186D188B00002237 /* AFURLResponseSerialization.h */; };
 		B115EB84186D1BE700002237 /* AFURLSessionManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB64186D188B00002237 /* AFURLSessionManager.h */; };
+		B115EB8A186D1D6D00002237 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B115EB89186D1D6D00002237 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,7 @@
 		B115EB63186D188B00002237 /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		B115EB64186D188B00002237 /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
 		B115EB65186D188B00002237 /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		B115EB89186D1D6D00002237 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B115EB8A186D1D6D00002237 /* SystemConfiguration.framework in Frameworks */,
 				B115EADC186D0F6200002237 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -158,6 +161,7 @@
 		B115EADA186D0F6200002237 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B115EB89186D1D6D00002237 /* SystemConfiguration.framework */,
 				B115EADB186D0F6200002237 /* Foundation.framework */,
 				B115EAE9186D0F6200002237 /* XCTest.framework */,
 				B115EAEC186D0F6200002237 /* UIKit.framework */,
