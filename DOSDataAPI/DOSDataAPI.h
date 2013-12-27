@@ -11,5 +11,6 @@
 @interface DOSDataAPI : NSObject
 
 - (NSString *) helloWorld;
+- (void) testNetworking;
 
 @end

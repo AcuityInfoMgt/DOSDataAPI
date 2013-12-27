@@ -7,12 +7,23 @@
 //
 
 #import "DOSDataAPI.h"
+#import "AFNetworking.h"
 
 @implementation DOSDataAPI
 
 - (NSString *) helloWorld
 {
     return @"Hello World";
+}
+
+- (void) testNetworking
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:@"http://www.state.gov/api/v1?command=get_secretary_travel&fields=title,mobile_url,id" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
 }
 
 @end
