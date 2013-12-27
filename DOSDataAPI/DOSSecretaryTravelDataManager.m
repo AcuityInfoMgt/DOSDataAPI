@@ -31,7 +31,7 @@
     // Format the query string
     //NSString *query = [NSString stringWithFormat:@"%@?command=%@&per_page=%ld&page=%ld&fields=%@",kAPIBaseURL,kSecretaryTravelCommand,self.itemsPerPage,pageNum,self.resultFields];
     
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:@"command",kSecretaryTravelCommand,@"per_page",self.itemsPerPage,@"page",pageNum,@"fields",self.resultFields, nil];
+    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:kSecretaryTravelCommand,@"command",self.itemsPerPage,@"per_page",pageNum,@"page",self.resultFields,@"fields",nil];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:kAPIBaseURL parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
