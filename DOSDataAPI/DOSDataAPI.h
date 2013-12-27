@@ -10,7 +10,10 @@
 
 @interface DOSDataAPI : NSObject
 
+// Define success/failure block types
+typedef void (^ APISuccessBlock)(id);
+
 - (NSString *) helloWorld;
-- (void) testNetworking;
+- (void) testNetworking:(APISuccessBlock)successBlock;
 
 @end
