@@ -32,11 +32,32 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        successBlock(responseObject);
+        
+        NSArray *secretaryTravelData = [self convertResponseToArray:responseObject];
+        successBlock(secretaryTravelData);
+    
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    
         NSLog(@"Error: %@", error);
         failureBlock(error);
+    
     }];
+}
+
+-(NSArray*) convertResponseToArray:(NSDictionary *)jsonResponse
+{
+    NSMutableArray *responseArray;
+    
+    NSDictionary *responseData = [jsonResponse objectForKey:@"secretary_travel"];
+    
+    for (NSDictionary *item in responseData)
+    {
+        DOSSecretaryTravelItem *travelItem = [[DOSSecretaryTravelItem alloc] init];
+        [travelItem mapAPIResponseToProperties:item];
+        [responseArray addObject:travelItem];
+    }
+    
+    return responseArray;
 }
 
 

@@ -10,7 +10,7 @@
 
 @interface DOSSecretaryTravelItem : NSObject
 
-@property (nonatomic, strong) NSString *id;
+@property (nonatomic, strong) NSString *itemId;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *siteUrl;
 @property (nonatomic, strong) NSString *contentUrl;
@@ -23,5 +23,6 @@
 @property (nonatomic, strong) NSString *dateEnd;
 @property (nonatomic, strong) NSString *terms;
 
+-(void) mapAPIResponseToProperties:(NSDictionary *)apiItemData;
 
 @end

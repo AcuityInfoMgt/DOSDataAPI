@@ -12,7 +12,7 @@
 #define kAPIBaseURL @"http://www.state.gov/api/v1"
 
 // **** Define query success/failure block types ****
-typedef void (^ APISuccessBlock)(id);
+typedef void (^ APISuccessBlock)(NSArray*);
 typedef void (^ APIFailureBlock)(NSError*);
 
 // **** Import State.gov Data SDK classes ****

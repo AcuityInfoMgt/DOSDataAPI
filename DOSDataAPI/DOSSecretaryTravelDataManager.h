@@ -21,6 +21,7 @@
 @property (nonatomic) NSInteger itemsPerPage;
 
 // Default = id, title, mobile_url, date_start, date_end
+// Other Options: id, title,site_url,content_url,content_html,full_url,full_html,mobile_url,date,date_start,date_end, terms
 @property (nonatomic, strong) NSString *resultFields;
 
 // **** Methods to obtain travel data ****
