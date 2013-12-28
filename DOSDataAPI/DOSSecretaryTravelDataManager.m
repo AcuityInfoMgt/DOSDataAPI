@@ -46,7 +46,7 @@
 
 -(NSArray*) convertResponseToArray:(NSDictionary *)jsonResponse
 {
-    NSMutableArray *responseArray;
+    NSMutableArray *responseArray = [[NSMutableArray alloc] init];
     
     NSDictionary *responseData = [jsonResponse objectForKey:@"secretary_travel"];
     
