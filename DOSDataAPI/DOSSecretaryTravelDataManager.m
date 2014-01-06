@@ -107,7 +107,7 @@
     NSString *queryStringParameters = [DOSDataAPI buildURLQueryStringFromOptions:queryOptions];
     
     // Format the query string
-    NSString *query = [NSString stringWithFormat:@"%@?command=%@&ref_id=%@%@",kAPIBaseURL,self.secretaryTravelDetailRequestCommand,itemID,queryStringParameters];
+    NSString *query = [NSString stringWithFormat:@"%@?command=%@&ref_id=%@",kAPIBaseURL,self.secretaryTravelDetailRequestCommand,itemID];
     
     if (queryStringParameters.length > 0)
     {
