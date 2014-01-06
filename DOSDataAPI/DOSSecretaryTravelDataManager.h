@@ -13,23 +13,26 @@
 
 @interface DOSSecretaryTravelDataManager : NSObject
 
-// **** Properties to control query parameters ****
+// **** Available Query Options for Secretary Travel Data ****
 
-// Default = 100
-@property (nonatomic) NSInteger itemsPerPage;
+// DOSQueryArgPerPage - Records Per Page (Default = 100)
+// DOSQueryArgPage - Page to return (Default = 0)
+// DOSQueryArgFields - Optional Fields id, title,site_url,content_url,content_html,full_url,full_html,mobile_url,date,date_start,date_end,terms
+//                     Default = id, title, mobile_url, date_start, date_end
+// DOSQueryArgID - Filter by ID including ranges
+// DOSQueryArgID - Filter by date including ranges
+// DOSQueryArgTerms - Filter for terms
 
-// Default = id, title, mobile_url, date_start, date_end
-// Other Options: id, title,site_url,content_url,content_html,full_url,full_html,mobile_url,date,date_start,date_end,terms
-@property (nonatomic, strong) NSString *secretaryTravelResultFields;
+// **** Available Query Options for Secretary Travel DETAIL Data ****
 
+// Options Same as above except for DOSQueryArgFields:
 // Default = id, title, mobile_url, date
 // Other Options: id, title,site_url,content_url,content_html,full_url,full_html,mobile_url,date,terms
-@property (nonatomic, strong) NSString *secretaryTravelDetailResultFields;
 
 // **** Methods to obtain travel data ****
 
--(void) getSecretaryTravelForPage:(NSInteger)pageNum success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock;
--(void) getSecretaryTravelDetailForItem:(NSString*)itemID page:(NSInteger)pageNum success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock;
+-(void) getSecretaryTravelWithOptions:(NSDictionary*)queryOptions success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock;
+-(void) getSecretaryTravelDetailForItem:(NSString*)itemID withOptions:(NSDictionary*)queryOptions success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock;
 
 
 @end

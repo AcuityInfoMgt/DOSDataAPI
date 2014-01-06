@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) NSString *secretaryTravelRequestCommand;
 @property (nonatomic, strong) NSString *secretaryTravelDetailRequestCommand;
+@property (nonatomic, strong) NSDictionary *secretaryTravelQueryDefaultOptions;
+@property (nonatomic, strong) NSDictionary *secretaryTravelDetailQueryDefaultOptions;
 
 @end
 
@@ -27,18 +29,36 @@
         // Set default query properties
         self.secretaryTravelRequestCommand = @"get_secretary_travel";
         self.secretaryTravelDetailRequestCommand = @"get_secretary_travel_detail";
-        self.itemsPerPage = 100;
-        self.secretaryTravelResultFields = @"id,title,mobile_url,date_start,date_end";
-        self.secretaryTravelDetailResultFields = @"id,title,mobile_url,date";
+        
+        // Set the default query options for secretary travel
+        NSMutableDictionary *queryOptions = [[NSMutableDictionary alloc] init];
+        [queryOptions setObject:[NSNumber numberWithInt:100] forKey:DOSQueryArgPerPage];
+        [queryOptions setObject:@"id,title,mobile_url,date_start,date_end" forKey:DOSQueryArgFields];
+        self.secretaryTravelQueryDefaultOptions = queryOptions;
+        
+        // Set the default query options for secretary travel detail
+        NSMutableDictionary *queryDetailOptions = [[NSMutableDictionary alloc] init];
+        [queryDetailOptions setObject:[NSNumber numberWithInt:100] forKey:DOSQueryArgPerPage];
+        [queryDetailOptions setObject:@"id,title,mobile_url,date" forKey:DOSQueryArgFields];
+        self.secretaryTravelDetailQueryDefaultOptions = queryDetailOptions;
+        
     }
     
     return self;
 }
 
--(void) getSecretaryTravelForPage:(NSInteger)pageNum success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock
+-(void) getSecretaryTravelWithOptions:(NSDictionary*)queryOptions success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock
 {
+    // Use the default query options if none were provided
+    if (!queryOptions) {
+        queryOptions = self.secretaryTravelQueryDefaultOptions;
+    }
+    
+    // Generate a query string from the options
+    NSString *queryStringParameters = [DOSDataAPI buildURLQueryStringFromOptions:queryOptions];
+    
     // Format the query string
-    NSString *query = [NSString stringWithFormat:@"%@?command=%@&per_page=%ld&page=%ld&fields=%@",kAPIBaseURL,self.secretaryTravelRequestCommand,(long)self.itemsPerPage,(long)pageNum,self.secretaryTravelResultFields];
+    NSString *query = [NSString stringWithFormat:@"%@?command=%@%@",kAPIBaseURL,self.secretaryTravelRequestCommand,queryStringParameters];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
@@ -71,10 +91,18 @@
 }
 
 
--(void) getSecretaryTravelDetailForItem:(NSString*)itemID page:(NSInteger)pageNum success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock
+-(void) getSecretaryTravelDetailForItem:(NSString*)itemID withOptions:(NSDictionary*)queryOptions success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock
 {
+    // Use the default query options if none were provided
+    if (!queryOptions) {
+        queryOptions = self.secretaryTravelQueryDefaultOptions;
+    }
+    
+    // Generate a query string from the options
+    NSString *queryStringParameters = [DOSDataAPI buildURLQueryStringFromOptions:queryOptions];
+    
     // Format the query string
-    NSString *query = [NSString stringWithFormat:@"%@?command=%@&ref_id=%@&per_page=%ld&page=%ld&fields=%@",kAPIBaseURL,self.secretaryTravelDetailRequestCommand,itemID,(long)self.itemsPerPage,(long)pageNum,self.secretaryTravelDetailResultFields];
+    NSString *query = [NSString stringWithFormat:@"%@?command=%@&ref_id=%@%@",kAPIBaseURL,self.secretaryTravelDetailRequestCommand,itemID,queryStringParameters];
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
