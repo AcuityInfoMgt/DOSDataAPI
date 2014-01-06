@@ -109,6 +109,11 @@
     // Format the query string
     NSString *query = [NSString stringWithFormat:@"%@?command=%@&ref_id=%@%@",kAPIBaseURL,self.secretaryTravelDetailRequestCommand,itemID,queryStringParameters];
     
+    if (queryStringParameters.length > 0)
+    {
+        query = [NSString stringWithFormat:@"%@&%@",query,queryStringParameters];
+    }
+    
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
