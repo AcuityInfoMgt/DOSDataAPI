@@ -26,7 +26,7 @@ NSString *const DOSQueryArgTerms = @"terms";
         id value = [queryOptions objectForKey:key];
         
         // Convert any non-strings to strings
-        if ([value class] != [NSString class]) {
+        if (![value isKindOfClass:[NSString class]]) {
             value = [value stringValue];
         }
         
