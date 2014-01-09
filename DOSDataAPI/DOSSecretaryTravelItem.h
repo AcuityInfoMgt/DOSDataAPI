@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "DOSDataAPIElement.h"
 
-@interface DOSSecretaryTravelItem : NSObject
+@interface DOSSecretaryTravelItem : DOSDataAPIElement
 
 @property (nonatomic, strong) NSString *itemId;
 @property (nonatomic, strong) NSString *title;
@@ -18,9 +19,9 @@
 @property (nonatomic, strong) NSString *fullUrl;
 @property (nonatomic, strong) NSString *fullHtml;
 @property (nonatomic, strong) NSString *mobileUrl;
-@property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *dateStart;
-@property (nonatomic, strong) NSString *dateEnd;
+@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSDate *dateStart;
+@property (nonatomic, strong) NSDate *dateEnd;
 @property (nonatomic, strong) NSString *terms;
 
 -(void) mapAPIResponseToProperties:(NSDictionary *)apiItemData;

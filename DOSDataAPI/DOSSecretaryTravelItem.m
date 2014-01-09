@@ -20,10 +20,10 @@
     self.fullUrl = [apiItemData objectForKey:@"full_url"];
     self.fullHtml = [apiItemData objectForKey:@"full_html"];
     self.mobileUrl = [apiItemData objectForKey:@"mobile_url"];
-    self.date = [apiItemData objectForKey:@"date"];
-    self.dateStart = [apiItemData objectForKey:@"date_start"];
-    self.dateEnd = [apiItemData objectForKey:@"date_end"];
     self.terms = [apiItemData objectForKey:@"terms"];
+    self.date = [self convertResponseElementToDateForKey:@"date" withResponse:apiItemData];
+    self.dateStart = [self convertResponseElementToDateForKey:@"date_start" withResponse:apiItemData];
+    self.dateEnd = [self convertResponseElementToDateForKey:@"date_end" withResponse:apiItemData];
 }
 
 @end

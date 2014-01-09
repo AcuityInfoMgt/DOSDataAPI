@@ -20,8 +20,8 @@
     self.fullUrl = [apiItemData objectForKey:@"full_url"];
     self.fullHtml = [apiItemData objectForKey:@"full_html"];
     self.mobileUrl = [apiItemData objectForKey:@"mobile_url"];
-    self.date = [apiItemData objectForKey:@"date"];
     self.terms = [apiItemData objectForKey:@"terms"];
+    self.date = [self convertResponseElementToDateForKey:@"date" withResponse:apiItemData];
 }
 
 @end

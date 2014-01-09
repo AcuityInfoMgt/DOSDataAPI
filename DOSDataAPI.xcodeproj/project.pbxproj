@@ -51,6 +51,8 @@
 		B115EB9A186DC2AB00002237 /* DOSSecretaryTravelItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB92186DB4FC00002237 /* DOSSecretaryTravelItem.h */; };
 		B115EBAD186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBAC186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m */; };
 		B115EBAE186E7DBF00002237 /* DOSSecretaryTravelDetailItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EBAB186E7DAF00002237 /* DOSSecretaryTravelDetailItem.h */; };
+		B14E5071187E2BAB00B9D2E3 /* DOSDataAPIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5070187E2BAB00B9D2E3 /* DOSDataAPIElement.m */; };
+		B14E5074187E462900B9D2E3 /* XCTestCase+AsyncTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5073187E462900B9D2E3 /* XCTestCase+AsyncTesting.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,6 +129,10 @@
 		B115EB93186DB4FC00002237 /* DOSSecretaryTravelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSSecretaryTravelItem.m; sourceTree = "<group>"; };
 		B115EBAB186E7DAF00002237 /* DOSSecretaryTravelDetailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSSecretaryTravelDetailItem.h; sourceTree = "<group>"; };
 		B115EBAC186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSSecretaryTravelDetailItem.m; sourceTree = "<group>"; };
+		B14E506F187E2BAB00B9D2E3 /* DOSDataAPIElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSDataAPIElement.h; sourceTree = "<group>"; };
+		B14E5070187E2BAB00B9D2E3 /* DOSDataAPIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSDataAPIElement.m; sourceTree = "<group>"; };
+		B14E5072187E462900B9D2E3 /* XCTestCase+AsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+AsyncTesting.h"; sourceTree = "<group>"; };
+		B14E5073187E462900B9D2E3 /* XCTestCase+AsyncTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+AsyncTesting.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +201,8 @@
 				B115EB93186DB4FC00002237 /* DOSSecretaryTravelItem.m */,
 				B115EBAB186E7DAF00002237 /* DOSSecretaryTravelDetailItem.h */,
 				B115EBAC186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m */,
+				B14E506F187E2BAB00B9D2E3 /* DOSDataAPIElement.h */,
+				B14E5070187E2BAB00B9D2E3 /* DOSDataAPIElement.m */,
 				B115EADE186D0F6200002237 /* Supporting Files */,
 			);
 			path = DOSDataAPI;
@@ -212,6 +220,8 @@
 			isa = PBXGroup;
 			children = (
 				B115EAF7186D0F6200002237 /* DOSDataAPITests.m */,
+				B14E5072187E462900B9D2E3 /* XCTestCase+AsyncTesting.h */,
+				B14E5073187E462900B9D2E3 /* XCTestCase+AsyncTesting.m */,
 				B115EAF2186D0F6200002237 /* Supporting Files */,
 			);
 			path = DOSDataAPITests;
@@ -353,6 +363,7 @@
 				B115EB78186D1B5000002237 /* AFURLResponseSerialization.m in Sources */,
 				B115EB79186D1B5000002237 /* AFURLSessionManager.m in Sources */,
 				B115EB91186DB4E300002237 /* DOSSecretaryTravelDataManager.m in Sources */,
+				B14E5071187E2BAB00B9D2E3 /* DOSDataAPIElement.m in Sources */,
 				B115EAE3186D0F6200002237 /* DOSDataAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +378,7 @@
 				B115EAF8186D0F6200002237 /* DOSDataAPITests.m in Sources */,
 				B115EB69186D188B00002237 /* AFNetworkReachabilityManager.m in Sources */,
 				B115EB6E186D188B00002237 /* AFURLSessionManager.m in Sources */,
+				B14E5074187E462900B9D2E3 /* XCTestCase+AsyncTesting.m in Sources */,
 				B115EB67186D188B00002237 /* AFHTTPRequestOperationManager.m in Sources */,
 				B115EB6A186D188B00002237 /* AFSecurityPolicy.m in Sources */,
 				B115EB68186D188B00002237 /* AFHTTPSessionManager.m in Sources */,
