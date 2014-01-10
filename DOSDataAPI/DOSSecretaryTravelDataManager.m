@@ -8,11 +8,15 @@
 
 #import "DOSSecretaryTravelDataManager.h"
 #import "AFNetworking.h"
+#import "DOSSecretaryTravelItem.h"
+#import "DOSSecretaryTravelDetailItem.h"
+#import "DOSSecretaryTravelStatsItem.h"
 
 @interface DOSSecretaryTravelDataManager()
 
 @property (nonatomic, strong) NSString *secretaryTravelRequestCommand;
 @property (nonatomic, strong) NSString *secretaryTravelDetailRequestCommand;
+@property (nonatomic, strong) NSString *secretaryTravelStatsCommand;
 @property (nonatomic, strong) NSDictionary *secretaryTravelQueryDefaultOptions;
 @property (nonatomic, strong) NSDictionary *secretaryTravelDetailQueryDefaultOptions;
 
@@ -29,6 +33,7 @@
         // Set default query properties
         self.secretaryTravelRequestCommand = @"get_secretary_travel";
         self.secretaryTravelDetailRequestCommand = @"get_secretary_travel_detail";
+        self.secretaryTravelStatsCommand = @"get_secretary_travel_stats";
         
         // Set the default query options for secretary travel
         NSMutableDictionary *queryOptions = [[NSMutableDictionary alloc] init];
@@ -139,6 +144,41 @@
         DOSSecretaryTravelDetailItem *travelDetailItem = [[DOSSecretaryTravelDetailItem alloc] init];
         [travelDetailItem mapAPIResponseToProperties:item];
         [responseArray addObject:travelDetailItem];
+    }
+    
+    return responseArray;
+}
+
+-(void) getSecretaryTravelStatsWithSuccess:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock
+{
+     // Format the query string
+    NSString *query = [NSString stringWithFormat:@"%@?command=%@",kAPIBaseURL,self.secretaryTravelStatsCommand];
+    
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSArray *secretaryTravelStatsData = [self convertSecretaryTravelStatsResponseToArray:responseObject];
+        successBlock(secretaryTravelStatsData);
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+        NSLog(@"Error: %@", error);
+        failureBlock(error);
+        
+    }];
+}
+
+-(NSArray*) convertSecretaryTravelStatsResponseToArray:(NSDictionary *)jsonResponse
+{
+    NSMutableArray *responseArray = [[NSMutableArray alloc] init];
+    
+    NSDictionary *responseData = [jsonResponse objectForKey:@"travel_stats"];
+    
+    for (NSDictionary *item in responseData)
+    {
+        DOSSecretaryTravelStatsItem *travelStats = [[DOSSecretaryTravelStatsItem alloc] init];
+        [travelStats mapAPIResponseToProperties:item];
+        [responseArray addObject:travelStats];
     }
     
     return responseArray;

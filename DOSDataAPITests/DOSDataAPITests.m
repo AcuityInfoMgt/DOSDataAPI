@@ -9,6 +9,8 @@
 #import <XCTest/XCTest.h>
 #import "DOSDataAPI.h"
 #import "XCTestCase+AsyncTesting.h"
+#import "DOSSecretaryTravelItem.h"
+#import "DOSSecretaryTravelStatsItem.h"
 
 @interface DOSDataAPITests : XCTestCase
 
@@ -76,6 +78,29 @@
         
     } failure:^(NSError *error) {
         XCTFail(@"Secretary Travel Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10];
+}
+
+// Tests the Secretary Travel Stats interface
+-(void)testSecretaryTravelStatsResponse
+{
+    DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
+    [dataMan getSecretaryTravelStatsWithSuccess:^(NSArray *response) {
+        XCTAssertNotNil(response, @"API Did not Return a Result: Secretary Travel Stats Test");
+        
+        // Test each field for data
+        DOSSecretaryTravelStatsItem *item = response[0];
+        XCTAssertNotNil(item.flightTimeHours, @"Secretary Travel Stats Response Parse Failed For: flightTimeHours");
+        XCTAssertNotNil(item.milage, @"Secretary Travel Stats Response Parse Failed For: milage");
+        XCTAssertNotNil(item.countriesVisited, @"Secretary Travel Stats Response Parse Failed For: countriesVisited");
+        XCTAssertNotNil(item.travelDays, @"Secretary Travel Stats Response Parse Failed For: travelDays");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"Secretary Travel Stats Error: %@", error);
     }];
     
     [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10];

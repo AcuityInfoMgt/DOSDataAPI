@@ -8,8 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "DOSDataAPI.h"
-#import "DOSSecretaryTravelItem.h"
-#import "DOSSecretaryTravelDetailItem.h"
 
 @interface DOSSecretaryTravelDataManager : NSObject
 
@@ -33,6 +31,6 @@
 
 -(void) getSecretaryTravelWithOptions:(NSDictionary*)queryOptions success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock;
 -(void) getSecretaryTravelDetailForItem:(NSString*)itemID withOptions:(NSDictionary*)queryOptions success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock;
-
+-(void) getSecretaryTravelStatsWithSuccess:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock;
 
 @end

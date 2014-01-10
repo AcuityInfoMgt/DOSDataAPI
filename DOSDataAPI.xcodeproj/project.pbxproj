@@ -53,6 +53,7 @@
 		B115EBAE186E7DBF00002237 /* DOSSecretaryTravelDetailItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EBAB186E7DAF00002237 /* DOSSecretaryTravelDetailItem.h */; };
 		B14E5071187E2BAB00B9D2E3 /* DOSDataAPIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5070187E2BAB00B9D2E3 /* DOSDataAPIElement.m */; };
 		B14E5074187E462900B9D2E3 /* XCTestCase+AsyncTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5073187E462900B9D2E3 /* XCTestCase+AsyncTesting.m */; };
+		B14E507C187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E507B187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +134,8 @@
 		B14E5070187E2BAB00B9D2E3 /* DOSDataAPIElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSDataAPIElement.m; sourceTree = "<group>"; };
 		B14E5072187E462900B9D2E3 /* XCTestCase+AsyncTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XCTestCase+AsyncTesting.h"; sourceTree = "<group>"; };
 		B14E5073187E462900B9D2E3 /* XCTestCase+AsyncTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+AsyncTesting.m"; sourceTree = "<group>"; };
+		B14E507A187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSSecretaryTravelStatsItem.h; sourceTree = "<group>"; };
+		B14E507B187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSSecretaryTravelStatsItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +204,8 @@
 				B115EB93186DB4FC00002237 /* DOSSecretaryTravelItem.m */,
 				B115EBAB186E7DAF00002237 /* DOSSecretaryTravelDetailItem.h */,
 				B115EBAC186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m */,
+				B14E507A187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.h */,
+				B14E507B187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m */,
 				B14E506F187E2BAB00B9D2E3 /* DOSDataAPIElement.h */,
 				B14E5070187E2BAB00B9D2E3 /* DOSDataAPIElement.m */,
 				B115EADE186D0F6200002237 /* Supporting Files */,
@@ -353,6 +358,7 @@
 			files = (
 				B115EBAD186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m in Sources */,
 				B115EB94186DB4FC00002237 /* DOSSecretaryTravelItem.m in Sources */,
+				B14E507C187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m in Sources */,
 				B115EB71186D1B5000002237 /* AFHTTPRequestOperation.m in Sources */,
 				B115EB72186D1B5000002237 /* AFHTTPRequestOperationManager.m in Sources */,
 				B115EB73186D1B5000002237 /* AFHTTPSessionManager.m in Sources */,
