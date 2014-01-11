@@ -36,7 +36,7 @@
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
     [dataMan getSecretaryTravelWithOptions:nil success:^(NSArray *response) {
         
-        XCTAssertNotNil(response, @"API Did not Return a Result: Secretary Travel Default Test");
+        XCTAssertNotNil(response, @"API Did not Return a Result: Secretary Travel Test");
         
         [self notify:XCTAsyncTestCaseStatusSucceeded];
         
@@ -81,6 +81,23 @@
     }];
     
     [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10];
+}
+
+// Tests the Secretary Travel Detail interface
+- (void)testSecretaryTravelDetail
+{
+    DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
+    [dataMan getSecretaryTravelDetailForItem:@"10060804" withOptions:nil success:^(NSArray *response) {
+        
+        XCTAssertNotNil(response, @"API Did not Return a Result: Secretary Travel Detail Test");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"Secretary Travel Detail Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:5];
 }
 
 // Tests the Secretary Travel Stats interface

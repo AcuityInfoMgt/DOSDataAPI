@@ -47,6 +47,8 @@
         [queryDetailOptions setObject:@"id,title,mobile_url,date" forKey:DOSQueryArgFields];
         self.secretaryTravelDetailQueryDefaultOptions = queryDetailOptions;
         
+        // Set the default record count
+        self.recordCountReturned = [NSNumber numberWithInt:0];
     }
     
     return self;
@@ -72,6 +74,9 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        // Set the record count returned
+        self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
         
         NSArray *secretaryTravelData = [self convertSecretaryTravelResponseToArray:responseObject];
         successBlock(secretaryTravelData);
@@ -122,6 +127,9 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
+        // Set the record count returned
+        self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
+        
         NSArray *secretaryTravelDetailData = [self convertSecretaryTravelDetailResponseToArray:responseObject];
         successBlock(secretaryTravelDetailData);
         
@@ -156,6 +164,9 @@
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        // Set the record count returned
+        self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
         
         NSArray *secretaryTravelStatsData = [self convertSecretaryTravelStatsResponseToArray:responseObject];
         successBlock(secretaryTravelStatsData);
