@@ -75,11 +75,24 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        // Set the record count returned
-        self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
+        NSNumber *success = [responseObject objectForKey:@"success"];
+        if ([success intValue] == 1) {
+            
+            // Set the record count returned
+            self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
+            
+            NSArray *secretaryTravelData = [self convertSecretaryTravelResponseToArray:responseObject];
+            successBlock(secretaryTravelData);
+
+        }
+        else
+        {
+            self.recordCountReturned = [NSNumber numberWithInt:0];
+            NSDictionary *details = [NSDictionary dictionaryWithObjectsAndKeys:[responseObject objectForKey:@"message"],NSLocalizedDescriptionKey, nil];
+            NSError *error = [NSError errorWithDomain:@"gov.state.DOSDataAPI" code:200 userInfo:details];
+            failureBlock(error);
+        }
         
-        NSArray *secretaryTravelData = [self convertSecretaryTravelResponseToArray:responseObject];
-        successBlock(secretaryTravelData);
     
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
     
@@ -127,11 +140,23 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        // Set the record count returned
-        self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
-        
-        NSArray *secretaryTravelDetailData = [self convertSecretaryTravelDetailResponseToArray:responseObject];
-        successBlock(secretaryTravelDetailData);
+        NSNumber *success = [responseObject objectForKey:@"success"];
+        if ([success intValue] == 1) {
+            
+            // Set the record count returned
+            self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
+            
+            NSArray *secretaryTravelDetailData = [self convertSecretaryTravelDetailResponseToArray:responseObject];
+            successBlock(secretaryTravelDetailData);
+            
+        }
+        else
+        {
+            self.recordCountReturned = [NSNumber numberWithInt:0];
+            NSDictionary *details = [NSDictionary dictionaryWithObjectsAndKeys:[responseObject objectForKey:@"message"],NSLocalizedDescriptionKey, nil];
+            NSError *error = [NSError errorWithDomain:@"gov.state.DOSDataAPI" code:200 userInfo:details];
+            failureBlock(error);
+        }
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
@@ -165,11 +190,24 @@
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
     [manager GET:query parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        // Set the record count returned
-        self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
+        NSNumber *success = [responseObject objectForKey:@"success"];
+        if ([success intValue] == 1) {
+            
+            // Set the record count returned
+            self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
+            
+            NSArray *secretaryTravelStatsData = [self convertSecretaryTravelStatsResponseToArray:responseObject];
+            successBlock(secretaryTravelStatsData);
+            
+        }
+        else
+        {
+            self.recordCountReturned = [NSNumber numberWithInt:0];
+            NSDictionary *details = [NSDictionary dictionaryWithObjectsAndKeys:[responseObject objectForKey:@"message"],NSLocalizedDescriptionKey, nil];
+            NSError *error = [NSError errorWithDomain:@"gov.state.DOSDataAPI" code:200 userInfo:details];
+            failureBlock(error);
+        }
         
-        NSArray *secretaryTravelStatsData = [self convertSecretaryTravelStatsResponseToArray:responseObject];
-        successBlock(secretaryTravelStatsData);
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
