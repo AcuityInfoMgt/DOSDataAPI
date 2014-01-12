@@ -56,6 +56,8 @@
 		B14E507C187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E507B187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m */; };
 		B14E5083188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5082188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m */; };
 		B14E5087188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5086188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m */; };
+		B14E508A18823A9500B9D2E3 /* DOSTIPReportItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E508918823A9500B9D2E3 /* DOSTIPReportItem.m */; };
+		B14E508D18823AF000B9D2E3 /* DOSTIPReportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E508C18823AF000B9D2E3 /* DOSTIPReportManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,6 +144,10 @@
 		B14E5082188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSSecretaryAppointmentItem.m; sourceTree = "<group>"; };
 		B14E5085188235B200B9D2E3 /* DOSSecretaryAppointmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSSecretaryAppointmentManager.h; sourceTree = "<group>"; };
 		B14E5086188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSSecretaryAppointmentManager.m; sourceTree = "<group>"; };
+		B14E508818823A9500B9D2E3 /* DOSTIPReportItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSTIPReportItem.h; sourceTree = "<group>"; };
+		B14E508918823A9500B9D2E3 /* DOSTIPReportItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSTIPReportItem.m; sourceTree = "<group>"; };
+		B14E508B18823AF000B9D2E3 /* DOSTIPReportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSTIPReportManager.h; sourceTree = "<group>"; };
+		B14E508C18823AF000B9D2E3 /* DOSTIPReportManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSTIPReportManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +215,8 @@
 				B115EB90186DB4E300002237 /* DOSSecretaryTravelDataManager.m */,
 				B14E5085188235B200B9D2E3 /* DOSSecretaryAppointmentManager.h */,
 				B14E5086188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m */,
+				B14E508B18823AF000B9D2E3 /* DOSTIPReportManager.h */,
+				B14E508C18823AF000B9D2E3 /* DOSTIPReportManager.m */,
 				B115EADE186D0F6200002237 /* Supporting Files */,
 			);
 			path = DOSDataAPI;
@@ -289,6 +297,8 @@
 				B14E507B187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m */,
 				B14E5081188234D500B9D2E3 /* DOSSecretaryAppointmentItem.h */,
 				B14E5082188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m */,
+				B14E508818823A9500B9D2E3 /* DOSTIPReportItem.h */,
+				B14E508918823A9500B9D2E3 /* DOSTIPReportItem.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -379,7 +389,9 @@
 				B14E507C187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m in Sources */,
 				B14E5087188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m in Sources */,
 				B115EB71186D1B5000002237 /* AFHTTPRequestOperation.m in Sources */,
+				B14E508A18823A9500B9D2E3 /* DOSTIPReportItem.m in Sources */,
 				B115EB72186D1B5000002237 /* AFHTTPRequestOperationManager.m in Sources */,
+				B14E508D18823AF000B9D2E3 /* DOSTIPReportManager.m in Sources */,
 				B115EB73186D1B5000002237 /* AFHTTPSessionManager.m in Sources */,
 				B115EB74186D1B5000002237 /* AFNetworkReachabilityManager.m in Sources */,
 				B115EB75186D1B5000002237 /* AFSecurityPolicy.m in Sources */,

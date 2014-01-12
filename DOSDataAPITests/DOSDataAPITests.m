@@ -13,6 +13,8 @@
 #import "DOSSecretaryTravelStatsItem.h"
 #import "DOSSecretaryAppointmentItem.h"
 #import "DOSSecretaryAppointmentManager.h"
+#import "DOSTIPReportItem.h"
+#import "DOSTIPReportManager.h"
 
 @interface DOSDataAPITests : XCTestCase
 
@@ -176,5 +178,55 @@
     [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10];
 }
 
+// Tests the parsing of the TIP Report Response
+- (void)testTIPReportData
+{
+    DOSTIPReportManager *dataMan = [[DOSTIPReportManager alloc] init];
+    [dataMan getTIPReportsWithOptions:nil success:^(NSArray *response) {
+        
+        XCTAssertNotNil(response, @"API Did not Return a Result: TIP Report Test");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"TIP Report Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:5];
+}
+
+// Tests the conversion of JSON response to Obj-C objects
+- (void)testTIPReportResponseConversion
+{
+    DOSTIPReportManager *dataMan = [[DOSTIPReportManager alloc] init];
+    
+    NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
+    [options setObject:@"id,title,site_url,content_url,content_html,full_url,full_html,mobile_url,year,terms" forKey:DOSQueryArgFields];
+    [options setObject:[NSNumber numberWithInt:1] forKey:DOSQueryArgPerPage];
+    
+    [dataMan getTIPReportsWithOptions:options success:^(NSArray *response) {
+        XCTAssertNotNil(response, @"API Did not Return a Result: TIP Report Full Field Test");
+        
+        // Test each field for data
+        DOSTIPReportItem *item = response[0];
+        XCTAssertNotNil(item.itemId, @"TIP Report Response Parse Failed For: itemID");
+        XCTAssertNotNil(item.title, @"TIP Report Response Parse Failed For: title");
+        XCTAssertNotNil(item.siteUrl, @"TIP Report Response Parse Failed For: siteUrl");
+        XCTAssertNotNil(item.contentUrl, @"TIP Report Response Parse Failed For: contentUrl");
+        XCTAssertNotNil(item.contentHtml, @"TIP Report Response Parse Failed For: contentHtml");
+        XCTAssertNotNil(item.fullUrl, @"TIP Report Response Parse Failed For: fullUrl");
+        XCTAssertNotNil(item.fullHtml, @"TIP Report Response Parse Failed For: fullHtml");
+        XCTAssertNotNil(item.mobileUrl, @"TIP Report Response Parse Failed For: mobileUrl");
+        XCTAssertNotNil(item.year, @"TIP Report Response Parse Failed For: date");
+        XCTAssertNotNil(item.terms, @"TIP Report Response Parse Failed For: terms");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"TIP Report Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10];
+}
 
 @end
