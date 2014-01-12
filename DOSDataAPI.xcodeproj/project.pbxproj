@@ -54,6 +54,8 @@
 		B14E5071187E2BAB00B9D2E3 /* DOSDataAPIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5070187E2BAB00B9D2E3 /* DOSDataAPIElement.m */; };
 		B14E5074187E462900B9D2E3 /* XCTestCase+AsyncTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5073187E462900B9D2E3 /* XCTestCase+AsyncTesting.m */; };
 		B14E507C187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E507B187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m */; };
+		B14E5083188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5082188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m */; };
+		B14E5087188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5086188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +138,10 @@
 		B14E5073187E462900B9D2E3 /* XCTestCase+AsyncTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "XCTestCase+AsyncTesting.m"; sourceTree = "<group>"; };
 		B14E507A187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSSecretaryTravelStatsItem.h; sourceTree = "<group>"; };
 		B14E507B187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSSecretaryTravelStatsItem.m; sourceTree = "<group>"; };
+		B14E5081188234D500B9D2E3 /* DOSSecretaryAppointmentItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSSecretaryAppointmentItem.h; sourceTree = "<group>"; };
+		B14E5082188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSSecretaryAppointmentItem.m; sourceTree = "<group>"; };
+		B14E5085188235B200B9D2E3 /* DOSSecretaryAppointmentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSSecretaryAppointmentManager.h; sourceTree = "<group>"; };
+		B14E5086188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSSecretaryAppointmentManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,18 +202,13 @@
 		B115EADD186D0F6200002237 /* DOSDataAPI */ = {
 			isa = PBXGroup;
 			children = (
+				B14E50841882352400B9D2E3 /* Models */,
 				B115EAE0186D0F6200002237 /* DOSDataAPI.h */,
 				B115EAE2186D0F6200002237 /* DOSDataAPI.m */,
 				B115EB8F186DB4E300002237 /* DOSSecretaryTravelDataManager.h */,
 				B115EB90186DB4E300002237 /* DOSSecretaryTravelDataManager.m */,
-				B115EB92186DB4FC00002237 /* DOSSecretaryTravelItem.h */,
-				B115EB93186DB4FC00002237 /* DOSSecretaryTravelItem.m */,
-				B115EBAB186E7DAF00002237 /* DOSSecretaryTravelDetailItem.h */,
-				B115EBAC186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m */,
-				B14E507A187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.h */,
-				B14E507B187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m */,
-				B14E506F187E2BAB00B9D2E3 /* DOSDataAPIElement.h */,
-				B14E5070187E2BAB00B9D2E3 /* DOSDataAPIElement.m */,
+				B14E5085188235B200B9D2E3 /* DOSSecretaryAppointmentManager.h */,
+				B14E5086188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m */,
 				B115EADE186D0F6200002237 /* Supporting Files */,
 			);
 			path = DOSDataAPI;
@@ -273,6 +274,23 @@
 				B115EB65186D188B00002237 /* AFURLSessionManager.m */,
 			);
 			path = AFNetworking;
+			sourceTree = "<group>";
+		};
+		B14E50841882352400B9D2E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B14E506F187E2BAB00B9D2E3 /* DOSDataAPIElement.h */,
+				B14E5070187E2BAB00B9D2E3 /* DOSDataAPIElement.m */,
+				B115EB92186DB4FC00002237 /* DOSSecretaryTravelItem.h */,
+				B115EB93186DB4FC00002237 /* DOSSecretaryTravelItem.m */,
+				B115EBAB186E7DAF00002237 /* DOSSecretaryTravelDetailItem.h */,
+				B115EBAC186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m */,
+				B14E507A187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.h */,
+				B14E507B187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m */,
+				B14E5081188234D500B9D2E3 /* DOSSecretaryAppointmentItem.h */,
+				B14E5082188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +377,7 @@
 				B115EBAD186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m in Sources */,
 				B115EB94186DB4FC00002237 /* DOSSecretaryTravelItem.m in Sources */,
 				B14E507C187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m in Sources */,
+				B14E5087188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m in Sources */,
 				B115EB71186D1B5000002237 /* AFHTTPRequestOperation.m in Sources */,
 				B115EB72186D1B5000002237 /* AFHTTPRequestOperationManager.m in Sources */,
 				B115EB73186D1B5000002237 /* AFHTTPSessionManager.m in Sources */,
@@ -370,6 +389,7 @@
 				B115EB79186D1B5000002237 /* AFURLSessionManager.m in Sources */,
 				B115EB91186DB4E300002237 /* DOSSecretaryTravelDataManager.m in Sources */,
 				B14E5071187E2BAB00B9D2E3 /* DOSDataAPIElement.m in Sources */,
+				B14E5083188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m in Sources */,
 				B115EAE3186D0F6200002237 /* DOSDataAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
