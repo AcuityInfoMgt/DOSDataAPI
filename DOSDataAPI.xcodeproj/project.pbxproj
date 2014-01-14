@@ -58,6 +58,8 @@
 		B14E5087188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5086188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m */; };
 		B14E508A18823A9500B9D2E3 /* DOSTIPReportItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E508918823A9500B9D2E3 /* DOSTIPReportItem.m */; };
 		B14E508D18823AF000B9D2E3 /* DOSTIPReportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E508C18823AF000B9D2E3 /* DOSTIPReportManager.m */; };
+		B14E50931884DAAA00B9D2E3 /* DOSCountryFactSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E50921884DAAA00B9D2E3 /* DOSCountryFactSheetItem.m */; };
+		B14E50961884DB5300B9D2E3 /* DOSCountryFactSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E50951884DB5300B9D2E3 /* DOSCountryFactSheetManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,6 +150,10 @@
 		B14E508918823A9500B9D2E3 /* DOSTIPReportItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSTIPReportItem.m; sourceTree = "<group>"; };
 		B14E508B18823AF000B9D2E3 /* DOSTIPReportManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSTIPReportManager.h; sourceTree = "<group>"; };
 		B14E508C18823AF000B9D2E3 /* DOSTIPReportManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSTIPReportManager.m; sourceTree = "<group>"; };
+		B14E50911884DAAA00B9D2E3 /* DOSCountryFactSheetItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSCountryFactSheetItem.h; sourceTree = "<group>"; };
+		B14E50921884DAAA00B9D2E3 /* DOSCountryFactSheetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSCountryFactSheetItem.m; sourceTree = "<group>"; };
+		B14E50941884DB5300B9D2E3 /* DOSCountryFactSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSCountryFactSheetManager.h; sourceTree = "<group>"; };
+		B14E50951884DB5300B9D2E3 /* DOSCountryFactSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSCountryFactSheetManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +223,8 @@
 				B14E5086188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m */,
 				B14E508B18823AF000B9D2E3 /* DOSTIPReportManager.h */,
 				B14E508C18823AF000B9D2E3 /* DOSTIPReportManager.m */,
+				B14E50941884DB5300B9D2E3 /* DOSCountryFactSheetManager.h */,
+				B14E50951884DB5300B9D2E3 /* DOSCountryFactSheetManager.m */,
 				B115EADE186D0F6200002237 /* Supporting Files */,
 			);
 			path = DOSDataAPI;
@@ -299,6 +307,8 @@
 				B14E5082188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m */,
 				B14E508818823A9500B9D2E3 /* DOSTIPReportItem.h */,
 				B14E508918823A9500B9D2E3 /* DOSTIPReportItem.m */,
+				B14E50911884DAAA00B9D2E3 /* DOSCountryFactSheetItem.h */,
+				B14E50921884DAAA00B9D2E3 /* DOSCountryFactSheetItem.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -388,6 +398,7 @@
 				B115EB94186DB4FC00002237 /* DOSSecretaryTravelItem.m in Sources */,
 				B14E507C187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m in Sources */,
 				B14E5087188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m in Sources */,
+				B14E50931884DAAA00B9D2E3 /* DOSCountryFactSheetItem.m in Sources */,
 				B115EB71186D1B5000002237 /* AFHTTPRequestOperation.m in Sources */,
 				B14E508A18823A9500B9D2E3 /* DOSTIPReportItem.m in Sources */,
 				B115EB72186D1B5000002237 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -396,6 +407,7 @@
 				B115EB74186D1B5000002237 /* AFNetworkReachabilityManager.m in Sources */,
 				B115EB75186D1B5000002237 /* AFSecurityPolicy.m in Sources */,
 				B115EB76186D1B5000002237 /* AFURLConnectionOperation.m in Sources */,
+				B14E50961884DB5300B9D2E3 /* DOSCountryFactSheetManager.m in Sources */,
 				B115EB77186D1B5000002237 /* AFURLRequestSerialization.m in Sources */,
 				B115EB78186D1B5000002237 /* AFURLResponseSerialization.m in Sources */,
 				B115EB79186D1B5000002237 /* AFURLSessionManager.m in Sources */,

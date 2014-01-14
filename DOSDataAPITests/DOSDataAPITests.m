@@ -15,6 +15,8 @@
 #import "DOSSecretaryAppointmentManager.h"
 #import "DOSTIPReportItem.h"
 #import "DOSTIPReportManager.h"
+#import "DOSCountryFactSheetManager.h"
+#import "DOSCountryFactSheetItem.h"
 
 @interface DOSDataAPITests : XCTestCase
 
@@ -40,7 +42,7 @@
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
     [dataMan getSecretaryTravelWithOptions:nil success:^(NSArray *response) {
         
-        XCTAssertNotNil(response, @"API Did not Return a Result: Secretary Travel Test");
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Secretary Travel Test");
         
         [self notify:XCTAsyncTestCaseStatusSucceeded];
         
@@ -61,7 +63,7 @@
     [options setObject:[NSNumber numberWithInt:1] forKey:DOSQueryArgPerPage];
     
     [dataMan getSecretaryTravelWithOptions:options success:^(NSArray *response) {
-        XCTAssertNotNil(response, @"API Did not Return a Result: Secretary Travel Full Field Test");
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Secretary Travel Full Field Test");
 
         // Test each field for data
         DOSSecretaryTravelItem *item = response[0];
@@ -93,7 +95,7 @@
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
     [dataMan getSecretaryTravelDetailForItem:@"10060804" withOptions:nil success:^(NSArray *response) {
         
-        XCTAssertNotNil(response, @"API Did not Return a Result: Secretary Travel Detail Test");
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Secretary Travel Detail Test");
         
         [self notify:XCTAsyncTestCaseStatusSucceeded];
         
@@ -109,7 +111,7 @@
 {
     DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
     [dataMan getSecretaryTravelStatsWithSuccess:^(NSArray *response) {
-        XCTAssertNotNil(response, @"API Did not Return a Result: Secretary Travel Stats Test");
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Secretary Travel Stats Test");
         
         // Test each field for data
         DOSSecretaryTravelStatsItem *item = response[0];
@@ -133,7 +135,7 @@
     DOSSecretaryAppointmentManager *dataMan = [[DOSSecretaryAppointmentManager alloc] init];
     [dataMan getSecretaryAppointmentsWithOptions:nil success:^(NSArray *response) {
         
-        XCTAssertNotNil(response, @"API Did not Return a Result: Secretary Appointment Test");
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Secretary Appointment Test");
         
         [self notify:XCTAsyncTestCaseStatusSucceeded];
         
@@ -154,7 +156,7 @@
     [options setObject:[NSNumber numberWithInt:1] forKey:DOSQueryArgPerPage];
     
     [dataMan getSecretaryAppointmentsWithOptions:options success:^(NSArray *response) {
-        XCTAssertNotNil(response, @"API Did not Return a Result: Secretary Appointment Full Field Test");
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Secretary Appointment Full Field Test");
         
         // Test each field for data
         DOSSecretaryAppointmentItem *item = response[0];
@@ -184,7 +186,7 @@
     DOSTIPReportManager *dataMan = [[DOSTIPReportManager alloc] init];
     [dataMan getTIPReportsWithOptions:nil success:^(NSArray *response) {
         
-        XCTAssertNotNil(response, @"API Did not Return a Result: TIP Report Test");
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: TIP Report Test");
         
         [self notify:XCTAsyncTestCaseStatusSucceeded];
         
@@ -205,7 +207,7 @@
     [options setObject:[NSNumber numberWithInt:1] forKey:DOSQueryArgPerPage];
     
     [dataMan getTIPReportsWithOptions:options success:^(NSArray *response) {
-        XCTAssertNotNil(response, @"API Did not Return a Result: TIP Report Full Field Test");
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: TIP Report Full Field Test");
         
         // Test each field for data
         DOSTIPReportItem *item = response[0];
@@ -224,6 +226,59 @@
         
     } failure:^(NSError *error) {
         XCTFail(@"TIP Report Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10];
+}
+
+// Tests the parsing of the Country Fact Sheet Response
+- (void)testCountryFactSheetData
+{
+    DOSCountryFactSheetManager *dataMan = [[DOSCountryFactSheetManager alloc] init];
+    [dataMan getCountryFactSheetsWithOptions:nil success:^(NSArray *response) {
+        
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Country Fact Sheet Test");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"Country Fact Sheet Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:5];
+}
+
+// Tests the conversion of JSON response to Obj-C objects
+- (void)testCountryFactSheetResponseConversion
+{
+    DOSCountryFactSheetManager *dataMan = [[DOSCountryFactSheetManager alloc] init];
+    
+    NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
+    [options setObject:@"id,title,site_url,content_url,content_html,full_url,full_html,mobile_url,date,terms,bureau,official_name" forKey:DOSQueryArgFields];
+    [options setObject:[NSNumber numberWithInt:1] forKey:DOSQueryArgPerPage];
+    
+    [dataMan getCountryFactSheetsWithOptions:options success:^(NSArray *response) {
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Country Fact Sheet Full Field Test");
+        
+        // Test each field for data
+        DOSCountryFactSheetItem *item = response[0];
+        XCTAssertNotNil(item.itemId, @"Country Fact Sheet Response Parse Failed For: itemID");
+        XCTAssertNotNil(item.title, @"Country Fact Sheet Response Parse Failed For: title");
+        XCTAssertNotNil(item.siteUrl, @"Country Fact Sheet Response Parse Failed For: siteUrl");
+        XCTAssertNotNil(item.contentUrl, @"Country Fact Sheet Response Parse Failed For: contentUrl");
+        XCTAssertNotNil(item.contentHtml, @"Country Fact Sheet Response Parse Failed For: contentHtml");
+        XCTAssertNotNil(item.fullUrl, @"Country Fact Sheet Response Parse Failed For: fullUrl");
+        XCTAssertNotNil(item.fullHtml, @"Country Fact Sheet Response Parse Failed For: fullHtml");
+        XCTAssertNotNil(item.mobileUrl, @"Country Fact Sheet Response Parse Failed For: mobileUrl");
+        XCTAssertNotNil(item.date, @"Country Fact Sheet Response Parse Failed For: date");
+        XCTAssertNotNil(item.terms, @"Country Fact Sheet Response Parse Failed For: terms");
+        XCTAssertNotNil(item.bureau, @"Country Fact Sheet Response Parse Failed For: bureau");
+        XCTAssertNotNil(item.officialName, @"Country Fact Sheet Response Parse Failed For: officialName");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"Country Fact Sheet Error: %@", error);
     }];
     
     [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10];

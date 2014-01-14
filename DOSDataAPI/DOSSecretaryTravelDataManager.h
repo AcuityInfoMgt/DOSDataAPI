@@ -21,7 +21,7 @@
 // DOSQueryArgFields - Optional Fields id, title,site_url,content_url,content_html,full_url,full_html,mobile_url,date,date_start,date_end,terms
 //                     Default = id, title, mobile_url, date_start, date_end
 // DOSQueryArgID - Filter by ID including ranges
-// DOSQueryArgID - Filter by date including ranges
+// DOSQueryArgDate - Filter by date including ranges
 // DOSQueryArgTerms - Filter for terms
 
 -(void) getSecretaryTravelWithOptions:(NSDictionary*)queryOptions success:(APISuccessBlock)successBlock failure:(APIFailureBlock)failureBlock;
