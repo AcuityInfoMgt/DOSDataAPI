@@ -60,6 +60,10 @@
 		B14E508D18823AF000B9D2E3 /* DOSTIPReportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E508C18823AF000B9D2E3 /* DOSTIPReportManager.m */; };
 		B14E50931884DAAA00B9D2E3 /* DOSCountryFactSheetItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E50921884DAAA00B9D2E3 /* DOSCountryFactSheetItem.m */; };
 		B14E50961884DB5300B9D2E3 /* DOSCountryFactSheetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E50951884DB5300B9D2E3 /* DOSCountryFactSheetManager.m */; };
+		B1C4BFF918862C47007AC0B2 /* DOSBureauItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C4BFF818862C47007AC0B2 /* DOSBureauItem.m */; };
+		B1C4BFFC18862C8F007AC0B2 /* DOSBureauManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C4BFFB18862C8F007AC0B2 /* DOSBureauManager.m */; };
+		B1C4BFFF18862ED4007AC0B2 /* DOSTermItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C4BFFE18862ED4007AC0B2 /* DOSTermItem.m */; };
+		B1C4C00218862EF7007AC0B2 /* DOSTermManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C4C00118862EF7007AC0B2 /* DOSTermManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -154,6 +158,14 @@
 		B14E50921884DAAA00B9D2E3 /* DOSCountryFactSheetItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSCountryFactSheetItem.m; sourceTree = "<group>"; };
 		B14E50941884DB5300B9D2E3 /* DOSCountryFactSheetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSCountryFactSheetManager.h; sourceTree = "<group>"; };
 		B14E50951884DB5300B9D2E3 /* DOSCountryFactSheetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSCountryFactSheetManager.m; sourceTree = "<group>"; };
+		B1C4BFF718862C47007AC0B2 /* DOSBureauItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSBureauItem.h; sourceTree = "<group>"; };
+		B1C4BFF818862C47007AC0B2 /* DOSBureauItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSBureauItem.m; sourceTree = "<group>"; };
+		B1C4BFFA18862C8F007AC0B2 /* DOSBureauManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSBureauManager.h; sourceTree = "<group>"; };
+		B1C4BFFB18862C8F007AC0B2 /* DOSBureauManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSBureauManager.m; sourceTree = "<group>"; };
+		B1C4BFFD18862ED4007AC0B2 /* DOSTermItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSTermItem.h; sourceTree = "<group>"; };
+		B1C4BFFE18862ED4007AC0B2 /* DOSTermItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSTermItem.m; sourceTree = "<group>"; };
+		B1C4C00018862EF7007AC0B2 /* DOSTermManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DOSTermManager.h; sourceTree = "<group>"; };
+		B1C4C00118862EF7007AC0B2 /* DOSTermManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DOSTermManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +237,10 @@
 				B14E508C18823AF000B9D2E3 /* DOSTIPReportManager.m */,
 				B14E50941884DB5300B9D2E3 /* DOSCountryFactSheetManager.h */,
 				B14E50951884DB5300B9D2E3 /* DOSCountryFactSheetManager.m */,
+				B1C4BFFA18862C8F007AC0B2 /* DOSBureauManager.h */,
+				B1C4BFFB18862C8F007AC0B2 /* DOSBureauManager.m */,
+				B1C4C00018862EF7007AC0B2 /* DOSTermManager.h */,
+				B1C4C00118862EF7007AC0B2 /* DOSTermManager.m */,
 				B115EADE186D0F6200002237 /* Supporting Files */,
 			);
 			path = DOSDataAPI;
@@ -309,6 +325,10 @@
 				B14E508918823A9500B9D2E3 /* DOSTIPReportItem.m */,
 				B14E50911884DAAA00B9D2E3 /* DOSCountryFactSheetItem.h */,
 				B14E50921884DAAA00B9D2E3 /* DOSCountryFactSheetItem.m */,
+				B1C4BFF718862C47007AC0B2 /* DOSBureauItem.h */,
+				B1C4BFF818862C47007AC0B2 /* DOSBureauItem.m */,
+				B1C4BFFD18862ED4007AC0B2 /* DOSTermItem.h */,
+				B1C4BFFE18862ED4007AC0B2 /* DOSTermItem.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -395,10 +415,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B115EBAD186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m in Sources */,
+				B1C4C00218862EF7007AC0B2 /* DOSTermManager.m in Sources */,
 				B115EB94186DB4FC00002237 /* DOSSecretaryTravelItem.m in Sources */,
 				B14E507C187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m in Sources */,
 				B14E5087188235B200B9D2E3 /* DOSSecretaryAppointmentManager.m in Sources */,
 				B14E50931884DAAA00B9D2E3 /* DOSCountryFactSheetItem.m in Sources */,
+				B1C4BFFF18862ED4007AC0B2 /* DOSTermItem.m in Sources */,
 				B115EB71186D1B5000002237 /* AFHTTPRequestOperation.m in Sources */,
 				B14E508A18823A9500B9D2E3 /* DOSTIPReportItem.m in Sources */,
 				B115EB72186D1B5000002237 /* AFHTTPRequestOperationManager.m in Sources */,
@@ -411,9 +433,11 @@
 				B115EB77186D1B5000002237 /* AFURLRequestSerialization.m in Sources */,
 				B115EB78186D1B5000002237 /* AFURLResponseSerialization.m in Sources */,
 				B115EB79186D1B5000002237 /* AFURLSessionManager.m in Sources */,
+				B1C4BFF918862C47007AC0B2 /* DOSBureauItem.m in Sources */,
 				B115EB91186DB4E300002237 /* DOSSecretaryTravelDataManager.m in Sources */,
 				B14E5071187E2BAB00B9D2E3 /* DOSDataAPIElement.m in Sources */,
 				B14E5083188234D500B9D2E3 /* DOSSecretaryAppointmentItem.m in Sources */,
+				B1C4BFFC18862C8F007AC0B2 /* DOSBureauManager.m in Sources */,
 				B115EAE3186D0F6200002237 /* DOSDataAPI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

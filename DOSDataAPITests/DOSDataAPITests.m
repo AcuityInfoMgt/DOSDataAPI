@@ -17,6 +17,10 @@
 #import "DOSTIPReportManager.h"
 #import "DOSCountryFactSheetManager.h"
 #import "DOSCountryFactSheetItem.h"
+#import "DOSBureauItem.h"
+#import "DOSBureauManager.h"
+#import "DOSTermItem.h"
+#import "DOSTermManager.h"
 
 @interface DOSDataAPITests : XCTestCase
 
@@ -279,6 +283,90 @@
         
     } failure:^(NSError *error) {
         XCTFail(@"Country Fact Sheet Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10];
+}
+
+// Tests the parsing of the Bureau list Response
+- (void)testBureauData
+{
+    DOSBureauManager *dataMan = [[DOSBureauManager alloc] init];
+    [dataMan getBureausWithOptions:nil success:^(NSArray *response) {
+        
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Bureau list Test");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"Bureau List Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:5];
+}
+
+// Tests the conversion of JSON response to Obj-C objects
+- (void)testBureauResponseConversion
+{
+    DOSBureauManager *dataMan = [[DOSBureauManager alloc] init];
+    
+    NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
+    [options setObject:[NSNumber numberWithInt:1] forKey:DOSQueryArgPerPage];
+    
+    [dataMan getBureausWithOptions:options success:^(NSArray *response) {
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Bureau Full Field Test");
+        
+        // Test each field for data
+        DOSBureauItem *item = response[0];
+        XCTAssertNotNil(item.name, @"Bureau Response Parse Failed For: name");
+        XCTAssertNotNil(item.description, @"Bureau Response Parse Failed For: description");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"Bureau List Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10];
+}
+
+// Tests the parsing of the Term list Response
+- (void)testTermData
+{
+    DOSTermManager *dataMan = [[DOSTermManager alloc] init];
+    [dataMan getTermsWithOptions:nil success:^(NSArray *response) {
+        
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Term list Test");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"Term List Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:5];
+}
+
+// Tests the conversion of JSON response to Obj-C objects
+- (void)testTermResponseConversion
+{
+    DOSTermManager *dataMan = [[DOSTermManager alloc] init];
+    
+    NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
+    [options setObject:[NSNumber numberWithInt:1] forKey:DOSQueryArgPerPage];
+    
+    [dataMan getTermsWithOptions:options success:^(NSArray *response) {
+        XCTAssertNotNil(response[0], @"API Did not Return a Result: Terms Full Field Test");
+        
+        // Test each field for data
+        DOSTermItem *item = response[0];
+        XCTAssertNotNil(item.name, @"Term Response Parse Failed For: name");
+        XCTAssertNotNil(item.description, @"Term Response Parse Failed For: description");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"Term List Error: %@", error);
     }];
     
     [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:10];
