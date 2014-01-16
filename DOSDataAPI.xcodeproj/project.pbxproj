@@ -51,6 +51,18 @@
 		B115EB9A186DC2AB00002237 /* DOSSecretaryTravelItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EB92186DB4FC00002237 /* DOSSecretaryTravelItem.h */; };
 		B115EBAD186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B115EBAC186E7DAF00002237 /* DOSSecretaryTravelDetailItem.m */; };
 		B115EBAE186E7DBF00002237 /* DOSSecretaryTravelDetailItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B115EBAB186E7DAF00002237 /* DOSSecretaryTravelDetailItem.h */; };
+		B11F37F018876821001B82B8 /* DOSDataAPIElement.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B14E506F187E2BAB00B9D2E3 /* DOSDataAPIElement.h */; };
+		B11F37F118876821001B82B8 /* DOSSecretaryTravelStatsItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B14E507A187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.h */; };
+		B11F37F218876821001B82B8 /* DOSSecretaryAppointmentItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B14E5081188234D500B9D2E3 /* DOSSecretaryAppointmentItem.h */; };
+		B11F37F318876821001B82B8 /* DOSTIPReportItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B14E508818823A9500B9D2E3 /* DOSTIPReportItem.h */; };
+		B11F37F418876821001B82B8 /* DOSCountryFactSheetItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B14E50911884DAAA00B9D2E3 /* DOSCountryFactSheetItem.h */; };
+		B11F37F518876821001B82B8 /* DOSBureauItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1C4BFF718862C47007AC0B2 /* DOSBureauItem.h */; };
+		B11F37F618876821001B82B8 /* DOSTermItem.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1C4BFFD18862ED4007AC0B2 /* DOSTermItem.h */; };
+		B11F37F718876821001B82B8 /* DOSSecretaryAppointmentManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B14E5085188235B200B9D2E3 /* DOSSecretaryAppointmentManager.h */; };
+		B11F37F818876821001B82B8 /* DOSTIPReportManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B14E508B18823AF000B9D2E3 /* DOSTIPReportManager.h */; };
+		B11F37F918876821001B82B8 /* DOSCountryFactSheetManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B14E50941884DB5300B9D2E3 /* DOSCountryFactSheetManager.h */; };
+		B11F37FA18876821001B82B8 /* DOSBureauManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1C4BFFA18862C8F007AC0B2 /* DOSBureauManager.h */; };
+		B11F37FB18876821001B82B8 /* DOSTermManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = B1C4C00018862EF7007AC0B2 /* DOSTermManager.h */; };
 		B14E5071187E2BAB00B9D2E3 /* DOSDataAPIElement.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5070187E2BAB00B9D2E3 /* DOSDataAPIElement.m */; };
 		B14E5074187E462900B9D2E3 /* XCTestCase+AsyncTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E5073187E462900B9D2E3 /* XCTestCase+AsyncTesting.m */; };
 		B14E507C187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B14E507B187F904B00B9D2E3 /* DOSSecretaryTravelStatsItem.m */; };
@@ -83,6 +95,18 @@
 			dstPath = include;
 			dstSubfolderSpec = 16;
 			files = (
+				B11F37F018876821001B82B8 /* DOSDataAPIElement.h in CopyFiles */,
+				B11F37F118876821001B82B8 /* DOSSecretaryTravelStatsItem.h in CopyFiles */,
+				B11F37F218876821001B82B8 /* DOSSecretaryAppointmentItem.h in CopyFiles */,
+				B11F37F318876821001B82B8 /* DOSTIPReportItem.h in CopyFiles */,
+				B11F37F418876821001B82B8 /* DOSCountryFactSheetItem.h in CopyFiles */,
+				B11F37F518876821001B82B8 /* DOSBureauItem.h in CopyFiles */,
+				B11F37F618876821001B82B8 /* DOSTermItem.h in CopyFiles */,
+				B11F37F718876821001B82B8 /* DOSSecretaryAppointmentManager.h in CopyFiles */,
+				B11F37F818876821001B82B8 /* DOSTIPReportManager.h in CopyFiles */,
+				B11F37F918876821001B82B8 /* DOSCountryFactSheetManager.h in CopyFiles */,
+				B11F37FA18876821001B82B8 /* DOSBureauManager.h in CopyFiles */,
+				B11F37FB18876821001B82B8 /* DOSTermManager.h in CopyFiles */,
 				B115EBAE186E7DBF00002237 /* DOSSecretaryTravelDetailItem.h in CopyFiles */,
 				B115EB99186DC2AB00002237 /* DOSSecretaryTravelDataManager.h in CopyFiles */,
 				B115EB9A186DC2AB00002237 /* DOSSecretaryTravelItem.h in CopyFiles */,
