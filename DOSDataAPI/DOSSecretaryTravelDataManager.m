@@ -130,7 +130,7 @@
 {
     // Use the default query options if none were provided
     if (!queryOptions) {
-        queryOptions = self.secretaryTravelQueryDefaultOptions;
+        queryOptions = self.secretaryTravelDetailQueryDefaultOptions;
     }
     
     // Generate a query string from the options
