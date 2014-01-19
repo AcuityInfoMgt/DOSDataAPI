@@ -71,6 +71,11 @@
                 NSArray *tipReportData = [self convertTIPReportResponseToArray:responseObject];
                 successBlock(tipReportData);
             }
+            else
+            {
+                // Return an empty array
+                successBlock([[NSArray alloc] init]);
+            }
             
         }
         else

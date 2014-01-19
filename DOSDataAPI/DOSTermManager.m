@@ -71,6 +71,11 @@
                 NSArray *termData = [self convertTermResponseToArray:responseObject];
                 successBlock(termData);
             }
+            else
+            {
+                // Return an empty array
+                successBlock([[NSArray alloc] init]);
+            }
             
         }
         else

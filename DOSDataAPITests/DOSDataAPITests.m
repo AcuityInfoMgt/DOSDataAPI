@@ -57,6 +57,29 @@
     [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:5];
 }
 
+// Test empty search results
+- (void)testSecretaryTravelTermSearchNullResults
+{
+    DOSSecretaryTravelDataManager *dataMan = [[DOSSecretaryTravelDataManager alloc] init];
+    
+    NSMutableDictionary *options = [[NSMutableDictionary alloc] init];
+    [options setObject:@"id,title" forKey:DOSQueryArgFields];
+    [options setObject:@"DOESNOTEXIST" forKey:DOSQueryArgTerms];
+    
+    
+    [dataMan getSecretaryTravelWithOptions:options success:^(NSArray *response) {
+        
+        XCTAssertNotNil(response, @"SDK did not handle null search result correctly: Secretary Travel Term Search Test");
+        
+        [self notify:XCTAsyncTestCaseStatusSucceeded];
+        
+    } failure:^(NSError *error) {
+        XCTFail(@"Secretary Travel Error: %@", error);
+    }];
+    
+    [self waitForStatus:XCTAsyncTestCaseStatusSucceeded timeout:5];
+}
+
 // Tests the conversion of JSON response to Obj-C objects
 - (void)testSecretaryTravelResponseConversion
 {

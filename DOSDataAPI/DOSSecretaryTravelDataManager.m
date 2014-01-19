@@ -85,6 +85,11 @@
                 NSArray *secretaryTravelData = [self convertSecretaryTravelResponseToArray:responseObject];
                 successBlock(secretaryTravelData);
             }
+            else
+            {
+                // Return an empty array
+                successBlock([[NSArray alloc] init]);
+            }
             
         }
         else
@@ -152,6 +157,11 @@
                 NSArray *secretaryTravelDetailData = [self convertSecretaryTravelDetailResponseToArray:responseObject];
                 successBlock(secretaryTravelDetailData);
             }
+            else
+            {
+                // Return an empty array
+                successBlock([[NSArray alloc] init]);
+            }
             
         }
         else
@@ -203,6 +213,11 @@
             if ([self.recordCountReturned intValue] > 0) {
                 NSArray *secretaryTravelStatsData = [self convertSecretaryTravelStatsResponseToArray:responseObject];
                 successBlock(secretaryTravelStatsData);
+            }
+            else
+            {
+                // Return an empty array
+                successBlock([[NSArray alloc] init]);
             }
             
         }

@@ -71,6 +71,11 @@
                 NSArray *bureauData = [self convertBureauResponseToArray:responseObject];
                 successBlock(bureauData);
             }
+            else
+            {
+                // Return an empty array
+                successBlock([[NSArray alloc] init]);
+            }
             
         }
         else

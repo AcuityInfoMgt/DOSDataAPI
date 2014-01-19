@@ -71,6 +71,11 @@
                 NSArray *secretaryAppointmentData = [self convertSecretaryAppointmentsResponseToArray:responseObject];
                 successBlock(secretaryAppointmentData);
             }
+            else
+            {
+                // Return an empty array
+                successBlock([[NSArray alloc] init]);
+            }
             
         }
         else

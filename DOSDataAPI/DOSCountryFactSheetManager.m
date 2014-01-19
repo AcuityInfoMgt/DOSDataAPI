@@ -71,6 +71,11 @@
                 NSArray *countryFactSheetData = [self convertCountryFactSheetResponseToArray:responseObject];
                 successBlock(countryFactSheetData);
             }
+            else
+            {
+                // Return an empty array
+                successBlock([[NSArray alloc] init]);
+            }
             
         }
         else
