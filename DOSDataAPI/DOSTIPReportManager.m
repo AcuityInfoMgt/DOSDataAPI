@@ -67,8 +67,10 @@
             // Set the record count returned
             self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
             
-            NSArray *tipReportData = [self convertTIPReportResponseToArray:responseObject];
-            successBlock(tipReportData);
+            if ([self.recordCountReturned intValue] > 0) {
+                NSArray *tipReportData = [self convertTIPReportResponseToArray:responseObject];
+                successBlock(tipReportData);
+            }
             
         }
         else

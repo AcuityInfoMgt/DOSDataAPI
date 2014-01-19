@@ -81,9 +81,11 @@
             // Set the record count returned
             self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
             
-            NSArray *secretaryTravelData = [self convertSecretaryTravelResponseToArray:responseObject];
-            successBlock(secretaryTravelData);
-
+            if ([self.recordCountReturned intValue] > 0) {
+                NSArray *secretaryTravelData = [self convertSecretaryTravelResponseToArray:responseObject];
+                successBlock(secretaryTravelData);
+            }
+            
         }
         else
         {
@@ -146,8 +148,10 @@
             // Set the record count returned
             self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
             
-            NSArray *secretaryTravelDetailData = [self convertSecretaryTravelDetailResponseToArray:responseObject];
-            successBlock(secretaryTravelDetailData);
+            if ([self.recordCountReturned intValue] > 0) {
+                NSArray *secretaryTravelDetailData = [self convertSecretaryTravelDetailResponseToArray:responseObject];
+                successBlock(secretaryTravelDetailData);
+            }
             
         }
         else
@@ -196,8 +200,10 @@
             // Set the record count returned
             self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
             
-            NSArray *secretaryTravelStatsData = [self convertSecretaryTravelStatsResponseToArray:responseObject];
-            successBlock(secretaryTravelStatsData);
+            if ([self.recordCountReturned intValue] > 0) {
+                NSArray *secretaryTravelStatsData = [self convertSecretaryTravelStatsResponseToArray:responseObject];
+                successBlock(secretaryTravelStatsData);
+            }
             
         }
         else

@@ -67,8 +67,10 @@
             // Set the record count returned
             self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
             
-            NSArray *secretaryAppointmentData = [self convertSecretaryAppointmentsResponseToArray:responseObject];
-            successBlock(secretaryAppointmentData);
+            if ([self.recordCountReturned intValue] > 0) {
+                NSArray *secretaryAppointmentData = [self convertSecretaryAppointmentsResponseToArray:responseObject];
+                successBlock(secretaryAppointmentData);
+            }
             
         }
         else

@@ -67,8 +67,10 @@
             // Set the record count returned
             self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
             
-            NSArray *bureauData = [self convertBureauResponseToArray:responseObject];
-            successBlock(bureauData);
+            if ([self.recordCountReturned intValue] > 0) {
+                NSArray *bureauData = [self convertBureauResponseToArray:responseObject];
+                successBlock(bureauData);
+            }
             
         }
         else

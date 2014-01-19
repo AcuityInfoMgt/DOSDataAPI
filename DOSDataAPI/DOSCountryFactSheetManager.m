@@ -67,8 +67,10 @@
             // Set the record count returned
             self.recordCountReturned = [responseObject objectForKey:@"total_record_count"];
             
-            NSArray *countryFactSheetData = [self convertCountryFactSheetResponseToArray:responseObject];
-            successBlock(countryFactSheetData);
+            if ([self.recordCountReturned intValue] > 0) {
+                NSArray *countryFactSheetData = [self convertCountryFactSheetResponseToArray:responseObject];
+                successBlock(countryFactSheetData);
+            }
             
         }
         else
