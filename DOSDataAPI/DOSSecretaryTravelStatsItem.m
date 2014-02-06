@@ -16,6 +16,16 @@
     self.milage = [apiItemData objectForKey:@"mileage"];
     self.countriesVisited = [apiItemData objectForKey:@"countries_visited"];
     self.travelDays = [apiItemData objectForKey:@"travel_days"];
+    
+    // This code attempts to correct for potential data entry errors in the mileage statistic
+    if ([self.milage isKindOfClass:[NSString class]]) {
+        NSString *mileageString = [apiItemData objectForKey:@"mileage"];
+        mileageString = [mileageString stringByReplacingOccurrencesOfString:@" " withString:@""];
+        
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        self.milage = [formatter numberFromString:mileageString];
+    }
 
 }
 
