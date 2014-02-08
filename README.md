@@ -9,7 +9,7 @@ The Select State.gov Data (SSD) SDK provides a software library that makes it ea
 * Trafficking in Person Reports
 * State.gov Metadata
 
-The full SDD API documentation can be found at [http://www.state.gov/api/v1/docs/](http://www.state.gov/api/v1/docs/ "State.gov API Documentation")
+The full SSD API documentation can be found at [http://www.state.gov/api/v1/docs/](http://www.state.gov/api/v1/docs/ "State.gov API Documentation")
 
 ##Integration
 
