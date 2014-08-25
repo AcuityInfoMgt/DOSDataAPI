@@ -26,6 +26,16 @@
         [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
         self.milage = [formatter numberFromString:mileageString];
     }
+    
+    // This code attempts to correct for potential data entry errors in the flight time statistic
+    if ([self.flightTimeHours isKindOfClass:[NSString class]]) {
+        NSString *flightTimeString = [apiItemData objectForKey:@"flight_time_hrs"];
+        flightTimeString = [flightTimeString stringByReplacingOccurrencesOfString:@"," withString:@""];
+        
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+        self.flightTimeHours = [formatter numberFromString:flightTimeString];
+    }
 
 }
 
